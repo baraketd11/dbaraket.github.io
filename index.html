@@ -419,7 +419,7 @@ library(tree)
 High = as.factor(ifelse(Sales &gt;=8,&quot;Yes&quot;, &quot;No&quot;))
 Carseats= data.frame(Carseats, High)</code></pre>
 <p>The tree function is then used to fit a classification tree in order to predict High using all of the variables but Sales.</p>
-<p>Next, take a summary of the classification tree. The summary shows that the variables used in the tree are: “ShelveLoc”, “Price”, “Income”, “Comp Price”, “Population”, “Age”, “US”, and “Advertising”. There are 27 terminal nodes, residual mean deviance is around 4.6%, and the training error rate is 9%. A small deviance indicates that the tree provides a good fit to the data.</p>
+<p>Next, take a summary of the classification tree. The summary shows that the variables used in the tree are: “ShelveLoc”, “Price”, “Income”, “Comp Price”, “Population”, “Age”, “US”, and “Advertising”. There are 27 terminal nodes, and the training error rate is 9%. A small deviance indicates that the tree provides a good fit to the data.</p>
 <pre class="r"><code>tree.carseats= tree(High~.-Sales,Carseats)
 summary(tree.carseats )</code></pre>
 <pre><code>## 
